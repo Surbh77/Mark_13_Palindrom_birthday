@@ -1,0 +1,56 @@
+:root{
+    --primary-color: #7c3aed;
+    --dary-grey: #64748b;
+    --off-white: #f3f4f6;
+}
+body{
+    background-color: var(--primary-color);
+    font-family:'Montserrat', sans-serif;
+    margin: 0%;
+    padding: 10px;
+    color: var(--off-white);
+}
+.container{
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    border: 5px solid var(--off-white);
+}
+
+.container h1{
+    padding: 25px;
+    font-size: 300%;
+}
+.container p{
+    padding: 10px;
+    font-size: x-large;
+}
+
+#bday-input{
+    border: 3px solid var(--dary-grey);
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    margin: auto;
+    display:block;
+}
+#palin-btn{
+    padding: 10px;
+    background-color: var(--dary-grey);
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#output1, #output2{
+    padding: 20px;
+    font-size: x-large;
+    border: 2px solid var(--dary-grey);
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--off-white);
+    color: var(--dary-grey);
+    height: 75px;
+}
