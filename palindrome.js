@@ -19,18 +19,20 @@ function clickHandler(e){
             day:Number(listOfDate[2]),
             month:Number(listOfDate[1]),
             year:Number(listOfDate[0])}
-    }
+    
 
-    var checkpalindrom=checkPalindromeForAllDateFormats(date);
-    if(checkpalindrom){
-        output.innerText='Yay! your birthday is a palindrome!!🥳🥳'
+        var checkpalindrom=checkPalindromeForAllDateFormats(date);
+        if(checkpalindrom){
+            output1.innerText='Yay! your birthday is a palindrome!!🥳🥳'
+        }else{
+            var [ctr1,nextDate,ctr2,prevDate]=getNextPalindromeDate(date);
+            output1.innerText=`Stay tuned, the next paindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, it is ${ctr1} days away!😮🥳`
+            output2.innerText=`The previous paindrome date was ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed it by  ${ctr2} days!😞😒`
+
+        }
     }else{
-        var [ctr1,nextDate,ctr2,prevDate]=getNextPalindromeDate(date);
-        output1.innerText=`Stay tuned, the next paindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, it is ${ctr1} days away!😮🥳`
-        output2.innerText=`The previous paindrome date was ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed it by  ${ctr2} days!😞😒`
-
+        output1.innerText='Please enter your date of birth!!🤔🤔'
     }
-
 }
 
 function reverseString(str){
@@ -81,7 +83,6 @@ function checkPalindromeForAllDateFormats(date){
 
     for(var i=0;i<listOfpalindromes.length;i++){
         if(isPalindrome(listOfpalindromes[i])){
-            console.log(i)
             isPalin=true;
             break;
 
@@ -198,9 +199,6 @@ function getNextPalindromeDate(date){
 
     return [ctr1,nextDate,ctr2,prevDate];
 }
-
-// var date={day:8,month:8,year:2021};
-// console.log(getNextPalindromeDate(date))
 
 
 
